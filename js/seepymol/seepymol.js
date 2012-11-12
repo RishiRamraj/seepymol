@@ -3,7 +3,7 @@ var jmol_protein_handler = function (json, element) {
     var toinsert = $("<div/>").attr('id',id);
     element.append(toinsert);
 
-    alert(json['test']);
+    alert(json['pdb']);
 };
 
 IPython.json_handlers.register_handler('Protein', jmol_protein_handler)

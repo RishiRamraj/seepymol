@@ -9,8 +9,26 @@ def protein(protein):
     '''
     Serialises a MMTK protein.
     '''
-    # Serialise the data to json format.
-    result = {'test': 'See Py Mol. Py Mols well.'}
+    # Prepare the data and configuration.
+    config = None
+    universe = protein.universe()
+    if universe is not None:
+        config = universe.contiguousObjectConfiguration([protein])
+
+    # Serialise the data.
+    buffer = StringIO()
+    file = PDBOutputFile(buffer)
+    file.write(protein, config)
+
+    # Retrieve the content.
+    pdb = buffer.getvalue()
+    buffer.close()
+    file.close()
+
+    print buffer
+
+    # Store it in the json object that is sent to javascript.
+    result = {'pdb': pdb}
 
     # Specify the javascript handler.
     result['handler'] = 'Protein'
