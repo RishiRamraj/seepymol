@@ -15,7 +15,7 @@ def load_ipython_extension(ip):
     if not _loaded:
         # Get the formatter.
         mime = 'application/json'
-        formatter = ip.display_formatter.formatters[mie]
+        formatter = ip.display_formatter.formatters[mime]
 
         # Register handlers.
         formatter.for_type_by_name('MMTK.Proteins', 'Protein', protein)
