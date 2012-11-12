@@ -3,6 +3,8 @@
 
 # Used to serialise the data.
 from zmq.utils import jsonapi
+from MMTK.PDB import PDBOutputFile 
+from StringIO import StringIO
 
 
 def protein(protein):
@@ -22,10 +24,7 @@ def protein(protein):
 
     # Retrieve the content.
     pdb = buffer.getvalue()
-    buffer.close()
     file.close()
-
-    print buffer
 
     # Store it in the json object that is sent to javascript.
     result = {'pdb': pdb}
