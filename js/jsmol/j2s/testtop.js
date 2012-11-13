@@ -1,2 +1,0 @@
-//loadj2sjmollib = function() {
-
