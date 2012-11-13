@@ -17,7 +17,7 @@ def load_ipython_extension(ip):
         formatter = ip.display_formatter.formatters[mime]
 
         # Register handlers.
-        formatter.for_type_by_name('MMTK.ChemicalObjects', 'ChemicalObject', chemicalobject)
+        #formatter.for_type_by_name('MMTK.ChemicalObjects', 'ChemicalObject', chemicalobject)
         formatter.for_type_by_name('MMTK.Collections', 'GroupOfAtoms', chemicalobject)
 
         _loaded = True
