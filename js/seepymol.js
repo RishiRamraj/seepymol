@@ -3,7 +3,7 @@ seepymol = {
     loaded: false,
 }
 
-var GLmol_chemicalobject_handler = function (json, element) {
+var GLmol_groupofatoms_handler = function (json, element) {
     var id = 'GLMol-'+IPython.utils.uuid();
     var toinsert = $("<div/>").attr('id',id).attr('style', "width: 500px; height: 400px; background-color: black;");
     element.append(toinsert);
@@ -17,4 +17,4 @@ var GLmol_chemicalobject_handler = function (json, element) {
     glmol.loadMolecule();
 };
 
-IPython.json_handlers.register_handler('ChemicalObject', GLmol_chemicalobject_handler);
+IPython.json_handlers.register_handler('GroupOfAtoms', GLmol_groupofatoms_handler);

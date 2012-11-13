@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # Used to serialise MMTK primitives to objects that can be rendered by JsMol.
-from seepymol.serialise import chemicalobject
+from seepymol.serialise import groupofatoms
 
 _loaded = False
 
@@ -17,7 +17,6 @@ def load_ipython_extension(ip):
         formatter = ip.display_formatter.formatters[mime]
 
         # Register handlers.
-        #formatter.for_type_by_name('MMTK.ChemicalObjects', 'ChemicalObject', chemicalobject)
-        formatter.for_type_by_name('MMTK.Collections', 'GroupOfAtoms', chemicalobject)
+        formatter.for_type_by_name('MMTK.Collections', 'GroupOfAtoms', groupofatoms)
 
         _loaded = True

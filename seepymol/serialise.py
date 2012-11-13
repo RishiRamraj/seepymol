@@ -7,20 +7,20 @@ from MMTK.PDB import PDBOutputFile
 from StringIO import StringIO
 
 
-def chemicalobject(chemicalobject):
+def groupofatoms(groupofatoms):
     '''
     Serialises a MMTK protein.
     '''
     # Prepare the data and configuration.
     config = None
-    universe = chemicalobject.universe()
+    universe = groupofatoms.universe()
     if universe is not None:
-        config = universe.contiguousObjectConfiguration([chemicalobject])
+        config = universe.contiguousObjectConfiguration([groupofatoms])
 
     # Serialise the data.
     buffer = StringIO()
     file = PDBOutputFile(buffer)
-    file.write(chemicalobject, config)
+    file.write(groupofatoms, config)
 
     # Retrieve the content.
     pdb = buffer.getvalue()
@@ -30,6 +30,6 @@ def chemicalobject(chemicalobject):
     result = {'pdb': pdb}
 
     # Specify the javascript handler.
-    result['handler'] = 'ChemicalObject'
+    result['handler'] = 'GroupOfAtoms'
 
     return jsonapi.dumps(result)
