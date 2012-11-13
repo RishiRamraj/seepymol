@@ -438,7 +438,7 @@ GLmol.prototype.create = function(id, suppressAutoload) {
    this.container = $('#' + this.id);
    this.WIDTH = this.container.width() * this.aaScale, this.HEIGHT = this.container.height() * this.aaScale;
    this.ASPECT = this.WIDTH / this.HEIGHT;
-   this.NEAR = 1, FAR = 800;
+   this.NEAR = 1, this.FAR = 800;
    this.CAMERA_Z = -150;
    this.renderer = new THREE.WebGLRenderer({antialias: true});
    this.renderer.sortObjects = false; // hopefully improve performance
@@ -627,7 +627,7 @@ GLmol.prototype.parsePDB2 = function(str) {
          else hetflag = false;
          atoms[serial] = {'resn': resn, 'x': x, 'y': y, 'z': z, 'elem': elem,
   'hetflag': hetflag, 'chain': chain, 'resi': resi, 'serial': serial, 'atom': atom,
-  'bonds': [], 'ss': 'c', 'color': 0xFFFFFF, 'bonds': [], 'bondOrder': [], 'b': b /*', altLoc': altLoc*/};
+  'bonds': [], 'ss': 'c', 'color': 0xFFFFFF, 'bondOrder': [], 'b': b /*', altLoc': altLoc*/};
       } else if (recordName == 'SHEET ') {
          var startChain = line.substr(21, 1);
          var startResi = parseInt(line.substr(22, 4));
