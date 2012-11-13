@@ -1,0 +1,291 @@
+
+---------- T
+loadScript j2s/java/package.js
+loadScript j2s/java/core.z.js ClazzNode
+loadScript j2s/org/jmol/awtjs/JmolURLConnection.js
+loadScript j2s/java/lang/StringBuffer.js
+loadScript j2s/java/util/Hashtable.js java.net.URL
+loadScript j2s/java/net/URLConnection.js org.jmol.awtjs.JmolURLConnection
+loadScript j2s/java/lang/AbstractStringBuilder.js java.lang.StringBuffer
+loadScript j2s/java/util/Dictionary.js java.util.Hashtable
+loadScript j2s/java/util/MapEntry.js java.util.Hashtable
+loadScript j2s/java/lang/StringBuilder.js
+loadScript j2s/java/util/AbstractCollection.js
+loadScript j2s/java/util/ArrayList.js
+loadScript j2s/org/apache/harmony/luni/util/Msg.js
+loadScript j2s/java/util/AbstractSet.js
+loadScript j2s/java/util/Arrays.js
+loadScript j2s/java/util/Collections.js
+loadScript j2s/java/util/AbstractList.js java.util.ArrayList
+loadScript j2s/java/util/Locale.js org.apache.harmony.luni.util.Msg
+loadScript j2s/org/apache/harmony/luni/util/MsgHelp.js org.apache.harmony.luni.util.Msg
+loadScript j2s/java/util/AbstractMap.js java.util.Collections
+loadScript j2s/java/util/SortedMap.js java.util.Collections
+loadScript j2s/java/util/SortedSet.js java.util.Collections
+loadScript j2s/java/util/Random.js
+loadScript j2s/java/util/ResourceBundle.js org.apache.harmony.luni.util.MsgHelp
+loadScript j2s/org/jmol/awtjs2d/JmolURLConnection.js
+loadScript j2s/org/jmol/appletjs/Jmol.js
+loadScript j2s/org/jmol/api/JmolStatusListener.js org.jmol.appletjs.Jmol
+loadScript j2s/org/jmol/api/JmolSyncInterface.js org.jmol.appletjs.Jmol
+loadScript j2s/org/jmol/api/JmolCallbackListener.js org.jmol.api.JmolStatusListener
+loadScript j2s/org/jmol/appletjs/JmolAppletRegistry.js
+loadScript j2s/org/jmol/constant/EnumCallback.js
+loadScript j2s/org/jmol/i18n/GT.js
+loadScript j2s/org/jmol/util/Escape.js
+loadScript j2s/org/jmol/util/Logger.js
+loadScript j2s/org/jmol/util/Parser.js
+loadScript j2s/org/jmol/util/TextFormat.js
+loadScript j2s/java/lang/Enum.js org.jmol.constant.EnumCallback
+loadScript j2s/org/jmol/util/StringXBuilder.js
+loadScript j2s/java/text/MessageFormat.js
+loadScript j2s/org/jmol/util/DefaultLogger.js org.jmol.util.Logger
+loadScript j2s/org/jmol/script/ScriptVariable.js
+loadScript j2s/org/jmol/util/ArrayUtil.js
+loadScript j2s/org/jmol/util/BitSetUtil.js
+loadScript j2s/org/jmol/util/Matrix3f.js
+loadScript j2s/org/jmol/util/Matrix4f.js
+loadScript j2s/org/jmol/util/LoggerInterface.js org.jmol.util.DefaultLogger
+loadScript j2s/org/jmol/script/Token.js org.jmol.script.ScriptVariable
+loadScript j2s/org/jmol/util/Point3f.js org.jmol.script.ScriptVariable
+loadScript j2s/org/jmol/modelset/Bond.js
+loadScript j2s/org/jmol/util/BitSet.js org.jmol.util.BitSetUtil
+loadScript j2s/org/jmol/util/Measure.js
+loadScript j2s/org/jmol/util/Tuple3f.js
+loadScript j2s/org/jmol/util/Point4f.js
+loadScript j2s/org/jmol/viewer/JmolConstants.js
+loadScript j2s/org/jmol/util/JmolEdge.js org.jmol.modelset.Bond
+loadScript j2s/org/jmol/util/Colix.js
+loadScript j2s/org/jmol/util/Eigen.js
+loadScript j2s/org/jmol/util/Quaternion.js
+loadScript j2s/org/jmol/util/Tuple4f.js org.jmol.util.Point4f
+loadScript j2s/java/io/BufferedInputStream.js org.jmol.viewer.JmolConstants
+loadScript j2s/java/util/Properties.js org.jmol.viewer.JmolConstants
+loadScript j2s/org/jmol/util/Elements.js org.jmol.viewer.JmolConstants
+loadScript j2s/org/jmol/util/Vector3f.js org.jmol.viewer.JmolConstants
+loadScript j2s/org/jmol/util/Int2IntHash.js org.jmol.util.Colix
+loadScript j2s/org/jmol/constant/EnumPalette.js
+loadScript j2s/java/io/FilterInputStream.js java.io.BufferedInputStream
+loadScript j2s/org/jmol/util/ColorUtil.js
+loadScript j2s/org/jmol/util/Shader.js
+loadScript j2s/org/jmol/util/Quadric.js
+loadScript j2s/org/jmol/util/AxisAngle4f.js
+loadScript j2s/org/jmol/viewer/Viewer.js
+loadScript j2s/java/io/InputStream.js java.io.FilterInputStream
+loadScript j2s/org/jmol/api/JmolViewer.js org.jmol.viewer.Viewer
+loadScript j2s/org/jmol/atomdata/AtomDataServer.js org.jmol.viewer.Viewer
+loadScript j2s/org/jmol/atomdata/RadiusData.js org.jmol.viewer.Viewer
+loadScript j2s/org/jmol/util/CommandHistory.js org.jmol.viewer.Viewer
+loadScript j2s/org/jmol/util/Dimension.js org.jmol.viewer.Viewer
+loadScript j2s/java/io/BufferedOutputStream.js
+loadScript j2s/java/io/BufferedReader.js
+loadScript j2s/java/io/BufferedWriter.js
+loadScript j2s/org/jmol/constant/EnumVdw.js org.jmol.atomdata.RadiusData
+loadScript j2s/java/io/StringReader.js
+loadScript j2s/java/lang/Thread.js
+loadScript j2s/java/io/FilterOutputStream.js java.io.BufferedOutputStream
+loadScript j2s/java/io/Reader.js java.io.BufferedReader
+loadScript j2s/java/io/Writer.js java.io.BufferedWriter
+loadScript j2s/org/jmol/adapter/smarter/SmarterJmolAdapter.js
+loadScript j2s/org/jmol/api/Interface.js
+loadScript j2s/java/lang/ThreadGroup.js
+loadScript j2s/java/io/OutputStream.js java.io.FilterOutputStream
+loadScript j2s/org/jmol/constant/EnumAxesMode.js
+loadScript j2s/org/jmol/constant/EnumFileStatus.js
+loadScript j2s/org/jmol/api/JmolAdapter.js org.jmol.adapter.smarter.SmarterJmolAdapter
+loadScript j2s/org/jmol/adapter/smarter/AtomIterator.js
+loadScript j2s/org/jmol/adapter/smarter/AtomSetCollection.js
+loadScript j2s/org/jmol/adapter/smarter/BondIterator.js
+loadScript j2s/org/jmol/adapter/smarter/Resolver.js
+loadScript j2s/org/jmol/adapter/smarter/StructureIterator.js
+loadScript j2s/org/jmol/constant/EnumQuantumShell.js org.jmol.api.JmolAdapter
+loadScript j2s/org/jmol/modelset/Group.js
+loadScript j2s/org/jmol/api/JmolAdapterAtomIterator.js org.jmol.adapter.smarter.AtomIterator
+loadScript j2s/org/jmol/adapter/smarter/Atom.js
+loadScript j2s/org/jmol/adapter/smarter/Bond.js
+loadScript j2s/org/jmol/util/Point3i.js
+loadScript j2s/org/jmol/api/JmolAdapterBondIterator.js org.jmol.adapter.smarter.BondIterator
+loadScript j2s/org/jmol/constant/EnumStructure.js
+loadScript j2s/java/util/StringTokenizer.js
+loadScript j2s/org/jmol/adapter/smarter/AtomSetCollectionReader.js
+loadScript j2s/org/jmol/adapter/smarter/AtomSetObject.js org.jmol.adapter.smarter.Bond
+loadScript j2s/org/jmol/util/Tuple3i.js org.jmol.util.Point3i
+loadScript j2s/org/jmol/io/LimitedLineReader.js
+loadScript j2s/org/jmol/api/JmolAdapterStructureIterator.js org.jmol.adapter.smarter.StructureIterator
+loadScript j2s/org/jmol/constant/EnumStereoMode.js
+loadScript j2s/org/jmol/io/Base64.js
+loadScript j2s/org/jmol/io/CifDataReader.js
+loadScript j2s/org/jmol/io/JmolBinary.js
+loadScript j2s/org/jmol/io/OutputStringBuilder.js
+loadScript j2s/org/jmol/script/ScriptCompiler.js
+loadScript j2s/org/jmol/script/ScriptEvaluator.js
+loadScript j2s/org/jmol/script/ScriptVariableInt.js
+loadScript j2s/org/jmol/shape/Shape.js
+loadScript j2s/java/io/ByteArrayInputStream.js
+loadScript j2s/java/io/InputStreamReader.js
+loadScript j2s/org/jmol/viewer/FileManager.js
+loadScript j2s/java/io/OutputStreamWriter.js
+loadScript j2s/org/jmol/script/ScriptCompilationTokenParser.js org.jmol.script.ScriptCompiler
+loadScript j2s/org/jmol/shape/Shape.js w3c script failed
+loadScript j2s/java/io/ByteArrayInputStream.js w3c script failed
+loadScript j2s/java/io/InputStreamReader.js w3c script failed
+loadScript j2s/org/jmol/viewer/FileManager.js w3c script failed
+loadScript j2s/java/io/OutputStreamWriter.js w3c script failed
+loadScript j2s/org/jmol/script/ScriptCompilationTokenParser.js w3c script failed
+loadScript j2s/org/jmol/io/FileReader.js
+loadScript j2s/org/jmol/viewer/DataManager.js
+loadScript j2s/org/jmol/constant/EnumAnimationMode.js
+loadScript j2s/org/jmol/modelset/Atom.js
+loadScript j2s/org/jmol/modelset/AtomCollection.js
+loadScript j2s/org/jmol/modelset/LabelToken.js
+loadScript j2s/org/jmol/io/FileReader.js w3c script failed
+loadScript j2s/org/jmol/viewer/DataManager.js w3c script failed
+loadScript j2s/org/jmol/constant/EnumAnimationMode.js w3c script failed
+loadScript j2s/org/jmol/modelset/Atom.js w3c script failed
+loadScript j2s/org/jmol/modelset/AtomCollection.js w3c script failed
+loadScript j2s/org/jmol/modelset/LabelToken.js w3c script failed
+loadScript j2s/org/jmol/util/JmolNode.js org.jmol.modelset.Atom
+loadScript j2s/org/jmol/util/Point3fi.js org.jmol.modelset.Atom
+loadScript j2s/org/jmol/geodesic/EnvelopeCalculation.js
+loadScript j2s/org/jmol/modelset/MeasurementData.js
+loadScript j2s/org/jmol/modelset/ModelCollection.js
+loadScript j2s/org/jmol/modelset/TickInfo.js
+loadScript j2s/org/jmol/util/JmolNode.js w3c script failed
+loadScript j2s/org/jmol/util/Point3fi.js w3c script failed
+loadScript j2s/org/jmol/geodesic/EnvelopeCalculation.js w3c script failed
+loadScript j2s/org/jmol/modelset/MeasurementData.js w3c script failed
+loadScript j2s/org/jmol/modelset/ModelCollection.js w3c script failed
+loadScript j2s/org/jmol/atomdata/AtomData.js org.jmol.geodesic.EnvelopeCalculation
+loadScript j2s/org/jmol/util/Geodesic.js
+loadScript j2s/org/jmol/util/Normix.js
+loadScript j2s/org/jmol/api/JmolMeasurementClient.js org.jmol.modelset.MeasurementData
+loadScript j2s/org/jmol/modelset/Measurement.js
+loadScript j2s/org/jmol/modelset/BondCollection.js org.jmol.modelset.ModelCollection
+loadScript j2s/org/jmol/util/BoxInfo.js org.jmol.modelset.ModelCollection
+loadScript j2s/org/jmol/util/Geodesic.js w3c script failed
+loadScript j2s/org/jmol/util/Normix.js w3c script failed
+loadScript j2s/org/jmol/api/JmolMeasurementClient.js w3c script failed
+loadScript j2s/org/jmol/modelset/Measurement.js w3c script failed
+loadScript j2s/org/jmol/modelset/BondCollection.js w3c script failed
+loadScript j2s/org/jmol/util/BoxInfo.js w3c script failed
+loadScript j2s/org/jmol/modelset/BondIteratorSelected.js
+loadScript j2s/org/jmol/modelset/HBond.js
+loadScript j2s/org/jmol/util/TriangleData.js
+loadScript j2s/org/jmol/bspt/Bspf.js
+loadScript j2s/org/jmol/io/XmlUtil.js
+loadScript j2s/org/jmol/modelset/AtomIteratorWithinModel.js
+loadScript j2s/org/jmol/modelset/BondIterator.js org.jmol.modelset.BondIteratorSelected
+loadScript j2s/org/jmol/modelset/AtomIteratorWithinModelSet.js
+loadScript j2s/org/jmol/util/JmolMolecule.js
+loadScript j2s/org/jmol/bspt/Bspt.js
+loadScript j2s/org/jmol/script/ScriptContext.js
+loadScript j2s/org/jmol/api/AtomIndexIterator.js org.jmol.modelset.AtomIteratorWithinModel
+loadScript j2s/org/jmol/script/ScriptException.js
+loadScript j2s/org/jmol/script/ScriptMathProcessor.js
+loadScript j2s/org/jmol/shape/Object2d.js
+loadScript j2s/org/jmol/bspt/CubeIterator.js
+loadScript j2s/org/jmol/bspt/Leaf.js
+loadScript j2s/org/jmol/util/ColorEncoder.js
+loadScript j2s/org/jmol/util/GData.js
+loadScript j2s/java/util/regex/Pattern.js
+loadScript j2s/org/jmol/viewer/PropertyManager.js
+loadScript j2s/org/jmol/util/MeshSurface.js
+loadScript j2s/org/jmol/bspt/Element.js org.jmol.bspt.Leaf
+loadScript j2s/org/jmol/bspt/Node.js
+loadScript j2s/org/jmol/api/JmolGraphicsInterface.js org.jmol.util.GData
+loadScript j2s/java/util/regex/Matcher.js
+loadScript j2s/org/jmol/util/JmolFont.js
+loadScript j2s/org/jmol/viewer/ActionManager.js
+loadScript j2s/org/jmol/viewer/StateManager.js
+loadScript j2s/org/jmol/script/ContextToken.js
+loadScript j2s/org/jmol/script/ScriptFlowContext.js
+loadScript j2s/java/util/regex/MatchResult.js java.util.regex.Matcher
+loadScript j2s/org/jmol/script/ScriptFunction.js
+loadScript j2s/org/jmol/util/Rectangle.js org.jmol.viewer.ActionManager
+loadScript j2s/org/jmol/viewer/MouseState.js org.jmol.viewer.ActionManager
+loadScript j2s/org/jmol/modelset/MeasurementPending.js
+loadScript j2s/org/jmol/thread/HoverWatcherThread.js
+loadScript j2s/org/jmol/viewer/binding/Binding.js
+loadScript j2s/org/jmol/viewer/binding/DragBinding.js
+loadScript j2s/org/jmol/viewer/binding/JmolBinding.js
+loadScript j2s/org/jmol/viewer/binding/PfaatBinding.js
+loadScript j2s/org/jmol/viewer/binding/RasmolBinding.js
+loadScript j2s/org/jmol/thread/JmolThread.js org.jmol.thread.HoverWatcherThread
+loadScript j2s/org/jmol/thread/ScriptParallelProcessor.js
+loadScript j2s/org/jmol/thread/TimeoutThread.js
+loadScript j2s/org/jmol/util/TempArray.js
+loadScript j2s/org/jmol/viewer/AnimationManager.js
+loadScript j2s/org/jmol/viewer/ColorManager.js
+loadScript j2s/org/jmol/viewer/ModelManager.js
+loadScript j2s/org/jmol/script/ScriptProcess.js
+loadScript j2s/org/jmol/thread/ScriptProcessRunnable.js
+loadScript j2s/org/jmol/viewer/ShapeManager.js
+loadScript j2s/org/jmol/thread/AnimationThread.js
+loadScript j2s/org/jmol/viewer/ScriptManager.js
+loadScript j2s/org/jmol/modelset/ModelLoader.js
+loadScript j2s/org/jmol/viewer/SelectionManager.js
+loadScript j2s/org/jmol/viewer/StatusManager.js
+loadScript j2s/org/jmol/viewer/TransformManager10.js
+loadScript j2s/org/jmol/viewer/TransformManager11.js
+loadScript j2s/org/jmol/thread/CommandWatcherThread.js
+loadScript j2s/org/jmol/modelset/Chain.js
+loadScript j2s/org/jmol/modelset/Model.js
+loadScript j2s/org/jmol/modelset/ModelSet.js
+loadScript j2s/org/jmol/thread/ScriptQueueThread.js
+loadScript j2s/org/jmol/viewer/TransformManager.js org.jmol.viewer.TransformManager11
+loadScript j2s/org/jmol/util/Hermite.js
+loadScript j2s/org/jmol/thread/MotionThread.js
+loadScript j2s/org/jmol/thread/SpinThread.js
+loadScript j2s/org/jmol/thread/VibrationThread.js
+loadScript j2s/org/jmol/awtjs2d/Platform.js
+loadScript j2s/org/jmol/api/ApiPlatform.js org.jmol.awtjs2d.Platform
+loadScript j2s/org/jmol/awtjs2d/AjaxURLStreamHandlerFactory.js
+loadScript j2s/org/jmol/awtjs2d/AjaxURLStreamHandler.js
+loadScript j2s/org/jmol/awtjs2d/Display.js
+loadScript j2s/org/jmol/awtjs2d/Font.js
+loadScript j2s/org/jmol/awtjs2d/Image.js
+loadScript j2s/org/jmol/awtjs2d/JmolFile.js
+loadScript j2s/org/jmol/api/JmolFileInterface.js org.jmol.awtjs2d.JmolFile
+loadScript j2s/org/jmol/awtjs2d/JmolFileAdapter.js
+loadScript j2s/org/jmol/api/JmolFileAdapterInterface.js org.jmol.awtjs2d.JmolFileAdapter
+loadScript j2s/org/jmol/awtjs2d/Mouse.js
+loadScript j2s/org/jmol/api/JmolMouseInterface.js org.jmol.awtjs2d.Mouse
+loadScript j2s/org/jmol/api/Event.js org.jmol.awtjs2d.Mouse
+loadScript j2s/org/jmol/g3d/Graphics3D.js
+loadScript j2s/org/jmol/api/JmolRendererInterface.js org.jmol.g3d.Graphics3D
+loadScript j2s/org/jmol/g3d/CircleRenderer.js
+loadScript j2s/org/jmol/g3d/CylinderRenderer.js
+loadScript j2s/org/jmol/g3d/HermiteRenderer.js
+loadScript j2s/org/jmol/g3d/ImageRenderer.js
+loadScript j2s/org/jmol/g3d/LineRenderer.js
+loadScript j2s/org/jmol/g3d/Pixelator.js
+loadScript j2s/org/jmol/g3d/PixelatorShaded.js
+loadScript j2s/org/jmol/g3d/Platform3D.js
+loadScript j2s/org/jmol/g3d/SphereRenderer.js
+loadScript j2s/org/jmol/g3d/TextRenderer.js
+loadScript j2s/org/jmol/g3d/TextSorter.js
+loadScript j2s/org/jmol/g3d/TextString.js
+loadScript j2s/org/jmol/g3d/TriangleRenderer.js
+loadScript j2s/org/jmol/util/Rgb16.js org.jmol.g3d.TriangleRenderer
+loadScript j2s/org/jmol/render/RepaintManager.js
+loadScript j2s/org/jmol/api/JmolRepaintInterface.js org.jmol.render.RepaintManager
+loadScript j2s/org/jmol/shape/Balls.js
+loadScript j2s/org/jmol/shape/AtomShape.js org.jmol.shape.Balls
+loadScript j2s/org/jmol/shape/Sticks.js
+loadScript j2s/org/jmol/shape/Measures.js
+loadScript j2s/org/jmol/shape/FontLineShape.js
+loadScript j2s/org/jmol/shape/FontShape.js org.jmol.shape.FontLineShape
+loadScript j2s/org/jmol/shape/Bbcage.js
+loadScript j2s/org/jmol/shape/Uccage.js
+loadScript j2s/org/jmol/shape/Frank.js
+loadScript j2s/org/jmol/adapter/readers/molxyz/MolReader.js
+loadScript j2s/org/jmol/render/BallsRenderer.js
+loadScript j2s/org/jmol/render/ShapeRenderer.js org.jmol.render.BallsRenderer
+loadScript j2s/org/jmol/render/SticksRenderer.js
+loadScript j2s/org/jmol/render/MeasuresRenderer.js
+loadScript j2s/org/jmol/render/FontLineShapeRenderer.js org.jmol.render.MeasuresRenderer
+loadScript j2s/org/jmol/render/BbcageRenderer.js
+loadScript j2s/org/jmol/render/CageRenderer.js org.jmol.render.BbcageRenderer
+loadScript j2s/org/jmol/render/UccageRenderer.js
+loadScript j2s/org/jmol/util/SimpleUnitCell.js
+loadScript j2s/org/jmol/render/FrankRenderer.js

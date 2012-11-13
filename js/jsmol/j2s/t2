@@ -1,0 +1,781 @@
+Comparing files j2.js and J2SJMOL.JS
+***** j2.js
+testbh = false
+
+LoadClazz = function() {
+
+***** J2SJMOL.JS
+LoadClazz = function() {
+
+*****
+
+***** j2.js
+                return true;
+        } else {
+                /*
+                 * To check all the inherited interfaces.
+                 */
+                var clazzName = Clazz.getClassName (obj);
+                return Clazz.getInheritedLevel (clazzName, clazz) >= 0;
+        }
+};
+***** J2SJMOL.JS
+                return true;
+        }
+        /*
+         * To check all the inherited interfaces.
+         */
+        var clazzName = Clazz.getClassName (obj);
+        if (clazz == Array) {
+                return clazzName == "Array";
+                }
+        return Clazz.getInheritedLevel (clazzName, clazz) >= 0;
+};
+*****
+
+***** j2.js
+        var fx = objThis[fxName];
+        
+        /*
+***** J2SJMOL.JS
+        var fx = objThis[fxName];
+
+        /*
+*****
+
+***** j2.js
+                        var clazzFun = stacks[i].prototype[fxName];
+                        
+                        var ret = Clazz.tryToSearchAndExecute (fxName, objThis, clazzFun, params, 
+                                        funParams/*, isSuper, clazzThis*/, fx);
+***** J2SJMOL.JS
+                        var clazzFun = stacks[i].prototype[fxName];
+
+                        var ret = Clazz.tryToSearchAndExecute (fxName, objThis, clazzFun, params,
+                                        funParams/*, isSuper, clazzThis*/, fx);
+*****
+
+***** j2.js
+};
+
+/* proected */
+***** J2SJMOL.JS
+};
+Clazz.currentPath= "";
+/* proected */
+*****
+
+***** j2.js
+        Clazz.decorateFunction (clazzFun, prefix, name, "Clazz.declareInterface");
+        Clazz.checkDeclared({path:Clazz.currentPath});
+        if (interfacez != null) {
+***** J2SJMOL.JS
+        Clazz.decorateFunction (clazzFun, prefix, name, "Clazz.declareInterface");
+        if (interfacez != null) {
+*****
+
+***** j2.js
+
+if (testbh) {
+alert("setting all array types to newArray")
+  Clazz.newFloatArray = Clazz.newDoubleArray = Clazz.newArray;
+  Clazz.newIntArray = Clazz.newLongArray = Clazz.newShortArray = Clazz.newByteArray = Clazz.newArray;
+}
+***** J2SJMOL.JS
+
+$_AI=Clazz.newIntArray;
+$_AF=Clazz.newFloatArray;
+$_AD=Clazz.newDoubleArray;
+$_AL=Clazz.newLongArray;
+$_AS=Clazz.newShortArray;
+$_AB=Clazz.newByteArray;
+$_AC=Clazz.newCharArray;
+$_Ab=Clazz.newBooleanArray;
+
+
+Clazz.isAS = function(a) { // just checking first parameter
+  return (typeof a == "object" && a.constructor && a.constructor.toString().indexOf(" Array") >= 0 && typeof a[0] == "string");
+
+}
+*****
+
+***** j2.js
+
+/* used in place of
+      Array.newInstance(array.getClass().getComponentType(), n);
+   note that we must not use this for Int32Array or Float32Array for MSIE 9 compatibility 
+*/
+/*
+Clazz.newArrayIF = function(A, n) {
+  if (Clazz._hasArrays32) {
+    if (typeof A == Int32Array) {
+    alert("should not be using Clazz.newArrayIF for float array " + A + " size " + n);
+        return new Int32Array(n);
+        }
+    if (typeof A == Float32Array) {
+    alert("should not be using Clazz.newArrayIF for float array " + A + " size " + n);
+        return new Float32Array(n);
+        }
+  }
+  return new Array(n);
+}
+*/
+
+$_AI=Clazz.newIntArray;
+$_AF=Clazz.newFloatArray;
+$_AD=Clazz.newDoubleArray;
+$_AL=Clazz.newLongArray;
+$_AS=Clazz.newShortArray;
+$_AB=Clazz.newByteArray;
+$_AC=Clazz.newCharArray;
+$_Ab=Clazz.newBooleanArray;
+
+***** J2SJMOL.JS
+
+Clazz.isASS = function(a) { // assumes non-null a[0]
+  return (typeof a == "object" && Clazz.isAS(a[0]));
+}
+
+Clazz.isAP = function(a) {
+  return (Clazz.getClassName(a[0]) == "org.jmol.util.Point3f");
+}
+
+Clazz.isAI = function(a) {
+  return (typeof a == "object" && a.constructor && a.constructor.toString().indexOf("Int32Array") >= 0);
+}
+
+Clazz.isAII = function(a) { // assumes non-null a[0]
+  return (typeof a == "object" && Clazz.isAI(a[0]));
+}
+
+Clazz.isAF = function(a) {
+  return (typeof a == "object" && a.constructor && a.constructor.toString().indexOf("Float32Array") >= 0);
+}
+
+Clazz.isAFF = function(a) { // assumes non-null a[0]
+  return (typeof a == "object" && Clazz.isAF(a[0]));
+}
+
+Clazz.isAFFF = function(a) { // assumes non-null a[0]
+  return (typeof a == "object" && Clazz.isAFF(a[0]));
+}
+
+Clazz.isAFloat = function(a) { // just checking first parameter
+  return (typeof a == "object" && a.constructor && a.constructor.toString().indexOf(" Array") >= 0 && Clazz.instanceOf(a[0], Fl
+oat));
+}
+
+*****
+
+***** j2.js
+
+Clazz.isAS = function(a) { // just checking first parameter
+  return (typeof a == "object" && a.constructor && a.constructor.toString().indexOf(" Array") >= 0 && typeof a[0] == "string");
+
+}
+
+Clazz.isASS = function(a) { // assumes non-null a[0]
+  return (typeof a == "object" && Clazz.isAS(a[0]));
+}
+
+Clazz.isAP = function(a) {
+  return (Clazz.getClassName(a[0]) == "org.jmol.util.Point3f");
+}
+
+Clazz.isAI = function(a) {
+  return (typeof a == "object" && a.constructor && a.constructor.toString().indexOf("Int32Array") >= 0);
+}
+
+Clazz.isAII = function(a) { // assumes non-null a[0]
+  return (typeof a == "object" && Clazz.isAI(a[0]));
+}
+
+Clazz.isAF = function(a) {
+  return (typeof a == "object" && a.constructor && a.constructor.toString().indexOf("Float32Array") >= 0);
+}
+
+Clazz.isAFF = function(a) { // assumes non-null a[0]
+  return (typeof a == "object" && Clazz.isAF(a[0]));
+}
+
+Clazz.isAFFF = function(a) { // assumes non-null a[0]
+  return (typeof a == "object" && Clazz.isAFF(a[0]));
+}
+
+Clazz.isAFloat = function(a) { // just checking first parameter
+  return (typeof a == "object" && a.constructor && a.constructor.toString().indexOf(" Array") >= 0 && Clazz.instanceOf(a[0], Fl
+oat));
+}
+
+
+/**
+***** J2SJMOL.JS
+
+/**
+*****
+
+***** j2.js
+};
+$fz = null; // for private method declaration
+***** J2SJMOL.JS
+};
+
+
+
+$fz = null; // for private method declaration
+*****
+
+***** j2.js
+c$ = null;
+/*-# cla$$$tack -> cst  #-*/
+***** J2SJMOL.JS
+c$ = null;
+
+
+/*-# cla$$$tack -> cst  #-*/
+*****
+
+***** j2.js
+                //alert("TESTING HERE in Clazz.forName")
+    x = Clazz.evalType (clazzName);
+                return x
+        } else {
+***** J2SJMOL.JS
+                //alert("TESTING HERE in Clazz.forName")
+                return Clazz.evalType (clazzName);
+        } else {
+*****
+
+***** j2.js
+/* private */
+ClazzNode = function () {
+        this.parents = new Array ();
+***** J2SJMOL.JS
+/* private */
+ClazzNode = function (why, requiredBy) {
+        this.parents = new Array ();
+*****
+
+***** j2.js
+        this.path = null;
+        this.status = 0;
+***** J2SJMOL.JS
+        this.path = null;
+        this.why = why;
+        this.requiredBy = requiredBy;
+        this.status = 0;
+*****
+
+***** j2.js
+/*-# clazzTreeRoot -> tr #-*/
+ClazzLoader.clazzTreeRoot = new ClazzNode ();
+
+***** J2SJMOL.JS
+/*-# clazzTreeRoot -> tr #-*/
+ClazzLoader.clazzTreeRoot = new ClazzNode ("root", null);
+
+*****
+
+***** j2.js
+ClazzLoader.jarClasspath = function (jar, clazzes) {
+        if (clazzes instanceof Array) {
+                ClazzLoader.unwrapArray (clazzes);
+                for (var i = 0; i < clazzes.length; i++) {
+                        ClazzLoader.classpathMap["#" + clazzes[i]] = jar;
+                }
+                ClazzLoader.classpathMap["$" + jar] = clazzes;
+        } else {
+                ClazzLoader.classpathMap["#" + clazzes] = jar;
+                ClazzLoader.classpathMap["$" + jar] = [clazzes];
+        }
+};
+***** J2SJMOL.JS
+ClazzLoader.jarClasspath = function (jar, clazzes) {
+        if (!(clazzes instanceof Array))
+    clazzes = [classes];
+        ClazzLoader.unwrapArray (clazzes);
+        for (var i = 0; i < clazzes.length; i++) {
+                ClazzLoader.classpathMap["#" + clazzes[i]] = jar;
+        }
+        ClazzLoader.classpathMap["$" + jar] = clazzes;
+};
+*****
+
+***** j2.js
+        }
+        
+        base = ClazzLoader.assureBase (base);
+***** J2SJMOL.JS
+        }
+        base = ClazzLoader.assureBase (base);
+*****
+
+***** j2.js
+/* protected */
+ClazzLoader.scriptInited = function (file) {};
+
+***** J2SJMOL.JS
+/* protected */
+ClazzLoader.scriptInited = function (file) {
+};
+
+*****
+
+***** j2.js
+                        ClazzLoader.loadedScripts[file] = false;
+                        ClazzLoader.loadScript (file);
+                        return;
+***** J2SJMOL.JS
+                        ClazzLoader.loadedScripts[file] = false;
+                        ClazzLoader.loadScript (file, "xhrOnload 2nd try", null);
+                        return;
+*****
+
+***** j2.js
+                // log ("re - loading ... " + path);
+                ClazzLoader.loadScript (path);
+        };
+***** J2SJMOL.JS
+                // log ("re - loading ... " + path);
+                ClazzLoader.loadScript (path, "ietoloadscriptAgain", null);
+        };
+*****
+
+***** j2.js
+                                ClazzLoader.loadedScripts[path] = false;
+                                ClazzLoader.loadScript (path);
+                                ClazzLoader.removeScriptNode (this);
+***** J2SJMOL.JS
+                                ClazzLoader.loadedScripts[path] = false;
+                                ClazzLoader.loadScript (path, "w3c script failed", null);
+                                ClazzLoader.removeScriptNode (this);
+*****
+
+***** j2.js
+                } else {
+                //System.out.println("path loaded: " + path)
+                        ClazzLoader.scriptLoaded (path);
+***** J2SJMOL.JS
+                } else {
+                  //System.out.println("path loaded: " + path)
+                        ClazzLoader.scriptLoaded (path);
+*****
+
+***** j2.js
+                                ClazzLoader.loadedScripts[path] = false;
+                                ClazzLoader.loadScript (path);
+                                ClazzLoader.removeScriptNode (this);
+***** J2SJMOL.JS
+                                ClazzLoader.loadedScripts[path] = false;
+                                ClazzLoader.loadScript (path, "local or loaded failed", null);
+                                ClazzLoader.removeScriptNode (this);
+*****
+
+***** j2.js
+ #-*/
+ClazzLoader.loadScript = function (file) {
+          Clazz.currentPath = file;
+***** J2SJMOL.JS
+ #-*/
+ClazzLoader.loadScript = function (file, why, n) {
+          Clazz.currentPath = file;
+*****
+
+***** j2.js
+
+        if (ClazzLoader.isUsingXMLHttpRequest) {
+***** J2SJMOL.JS
+
+  Clazz.addLoadScript(file, why, n);
+
+        if (ClazzLoader.isUsingXMLHttpRequest) {
+*****
+
+***** j2.js
+
+/* private */
+/*-# queueBe4SWT -> q4T #-*/
+ClazzLoader.queueBe4SWT = [];
+
+***** J2SJMOL.JS
+
+Clazz.fileList = {}
+Clazz.addLoadScript = function(file, why, n) {
+  file = file.replace(/\//g,"\\").replace(/j2s[\\\.]/g,"")
+  if (!n) {
+  System.out.println("loadScript " + file + " " + why);
+  return;
+  }
+  if (Clazz.fileList[n.name]) return;
+  var entry = {}
+  Clazz.fileList[n.name] = entry;
+        entry.file = file;
+        entry.why = why;
+        var isMust = (why && why.charAt(0) == "m");
+        entry.requiredBy = (isMust ? n.requiredBy.name : null)
+        if (n.requiredBy) {
+                 if (!Clazz.fileList[n.requiredBy.name])alert(JSON.stringify(n))
+        }
+  System.out.println("loadScript "  + file + " " + why + " " + (n.requiredBy ? n.requiredBy.name : ""))
+
+
+}
+
+
+*****
+
+***** j2.js
+/* private */
+/*-# lockQueueBe4SWT -> l4T #-*/
+ClazzLoader.lockQueueBe4SWT = true;
+
+***** J2SJMOL.JS
+/* private */
+/*-# queueBe4SWT -> q4T #-*/
+ClazzLoader.queueBe4SWT = [];
+
+*****
+
+***** j2.js
+/* private */
+/*-# isLoadingEntryClass -> lec #-*/
+ClazzLoader.isLoadingEntryClass = true;
+
+***** J2SJMOL.JS
+/* private */
+/*-# lockQueueBe4SWT -> l4T #-*/
+ClazzLoader.lockQueueBe4SWT = true;
+
+*****
+
+***** j2.js
+/* private */
+/*-# besidesJavaPackage -> bJP #-*/
+***** J2SJMOL.JS
+/* private */
+/*-# isLoadingEntryClass -> lec #-*/
+ClazzLoader.isLoadingEntryClass = true;
+
+/* private */
+/*-# besidesJavaPackage -> bJP #-*/
+*****
+
+***** j2.js
+                                } else {
+                                        n = new ClazzNode ();
+                                        n.name = nm;
+***** J2SJMOL.JS
+                                } else {
+                                        n = new ClazzNode ("$" + file, null);
+                                        n.name = nm;
+*****
+
+***** j2.js
+         */
+        if (!ClazzLoader.keepOnLoading) {
+                return;
+***** J2SJMOL.JS
+         */
+         
+        if (!ClazzLoader.keepOnLoading) {
+        alert("classloader note keeponloading")
+                return;
+*****
+
+***** j2.js
+                        ClazzNode.STATUS_KNOWN);
+        //alert (file + " next ..." + n) ;
+        if (n != null) {
+***** J2SJMOL.JS
+                        ClazzNode.STATUS_KNOWN);
+        //System.out.println(file + " next ..." + n) ;
+        if (n != null) {
+*****
+
+***** j2.js
+                                ClazzLoader.addChildClassNode(ClazzLoader.clazzTreeRoot, n, 1);
+                                ClazzLoader.loadScript (n.path);
+                                //alert("part1")
+***** J2SJMOL.JS
+                                ClazzLoader.addChildClassNode(ClazzLoader.clazzTreeRoot, n, 1);
+                                ClazzLoader.loadScript (n.path, n.why, n);
+                                //alert("part1")
+*****
+
+***** j2.js
+                        if (n != null) {
+                                //log ("in optionals unknown..." + n.name);
+                                ClazzLoader.loadClassNode (n);
+***** J2SJMOL.JS
+                        if (n != null) {
+                                //System.out.println("in optionals unknown..." + file + " " + n.name + " " + ClazzLoader.inLoad
+ingThreads + "/" + ClazzLoader.maxLoadingThreads);
+                                ClazzLoader.loadClassNode (n);
+*****
+
+***** j2.js
+                                        if (nn == null) break;
+                                        ClazzLoader.loadClassNode (nn); // will increase inLoadingThreads!
+***** J2SJMOL.JS
+                                        if (nn == null) break;
+                                //System.out.println("in optionals unknown2..." + file + " " + nn.name);
+                                        ClazzLoader.loadClassNode (nn); // will increase inLoadingThreads!
+*****
+
+***** j2.js
+                        } else {
+                                loadFurther = true;
+***** J2SJMOL.JS
+                        } else {
+        //System.out.println("no optionals");
+                                loadFurther = true;
+*****
+
+***** j2.js
+        if (loadFurther && ClazzLoader.inLoadingThreads == 0) {
+                //log ("no optionals?");
+                while ((n = ClazzLoader.findNextMustClass (ClazzLoader.clazzTreeRoot, ClazzNode.STATUS_CONTENT_LOADED)) != null
+***** J2SJMOL.JS
+        if (loadFurther && ClazzLoader.inLoadingThreads == 0) {
+                while ((n = ClazzLoader.findNextMustClass (ClazzLoader.clazzTreeRoot, ClazzNode.STATUS_CONTENT_LOADED)) != null
+*****
+
+***** j2.js
+                }
+
+                /*
+***** J2SJMOL.JS
+                }
+                /*
+*****
+
+***** j2.js
+
+Clazz.declaredPaths = {};
+
+Clazz.checkDeclared = function(node) {
+                        if (node.path != null && !Clazz.declaredPaths[node.path]) {
+                                //System.out.println(("call loadScript " + node.path.replace(/\//g,"\\")).replace(/j2s[\\\.]/g,
+""))
+                                Clazz.declaredPaths[node.path] = 1;
+                        }
+}
+/**
+***** J2SJMOL.JS
+
+/**
+*****
+
+***** j2.js
+                        || node.status >= ClazzNode.STATUS_OPTIONALS_LOADED) {
+                Clazz.checkDeclared(node)
+                ClazzLoader.destroyClassNode (node);
+***** J2SJMOL.JS
+                        || node.status >= ClazzNode.STATUS_OPTIONALS_LOADED) {
+    //System.out.println("destroying node " + node.name + " " + node.path)
+                ClazzLoader.destroyClassNode (node);
+*****
+
+***** j2.js
+                        var n = node.musts[i];
+                        if (n.status < ClazzNode.STATUS_DECLARED) {
+***** J2SJMOL.JS
+                        var n = node.musts[i];
+                        if (n.why != "m"){
+                                n.requiredBy = node;
+                                n.why = "m";
+                        }
+                        if (n.status < ClazzNode.STATUS_DECLARED) {
+*****
+
+***** j2.js
+                                        var nns = new Array (); // for optional loaded events!
+                                        n.status = ClazzNode.STATUS_OPTIONALS_LOADED;
+***** J2SJMOL.JS
+                                        var nns = new Array (); // for optional loaded events!
+
+                                        n.status = ClazzNode.STATUS_OPTIONALS_LOADED;
+*****
+
+***** j2.js
+                                                                // Same as above
+                                                                ClazzLoader.destroyClassNode (nn);
+***** J2SJMOL.JS
+                                                                // Same as above
+
+                                                                ClazzLoader.destroyClassNode (nn);
+*****
+
+***** j2.js
+                        }
+                        Clazz.checkDeclared(node);
+                        node.status = ClazzNode.STATUS_DECLARED;
+***** J2SJMOL.JS
+                        }
+                        node.status = ClazzNode.STATUS_DECLARED;
+*****
+
+***** j2.js
+ClazzLoader.load = function (musts, clazz, optionals, declaration) {
+        //alert ("Loading " + clazz + " ...");
+        ClazzLoader.checkInteractive ();
+***** J2SJMOL.JS
+ClazzLoader.load = function (musts, clazz, optionals, declaration) {
+        
+        ClazzLoader.checkInteractive ();
+*****
+
+***** j2.js
+        var node = ClazzLoader.mapPath2ClassNode["#" + clazz];
+        if (node == null) { // ClazzLoader.load called inside *.z.js?
+***** J2SJMOL.JS
+        var node = ClazzLoader.mapPath2ClassNode["#" + clazz];
+        
+                //System.out.println("Loading " + clazz + " ... " + node);
+
+        if (node == null) { // ClazzLoader.load called inside *.z.js?
+*****
+
+***** j2.js
+                } else {
+                        node = new ClazzNode ();
+                }
+                //*
+                //node = new ClazzNode ();
+                node.name = clazz;
+***** J2SJMOL.JS
+                } else {
+                        node = new ClazzNode ("#" + clazz, null);
+                }
+                node.name = clazz;
+*****
+
+***** j2.js
+                if (pp == null) { // TODO: Remove this test in final release
+                        alert ("error finding class " + clazz + " " );
+                        error ("Java2Script implementation error! Please report this bug!");
+                }
+***** J2SJMOL.JS
+                if (pp == null) { // TODO: Remove this test in final release
+                        //alert ("error finding classpathMap for " + clazz + " " );
+                        //error ("Java2Script implementation error! Please report this bug!");
+      pp = "unknown"
+                }
+*****
+
+***** j2.js
+                        }
+                        if (ClazzLoader.isClassDefined (name) 
+                                        || ClazzLoader.isClassExcluded (name)) {
+                                continue;
+***** J2SJMOL.JS
+                        }
+                        //System.out.println(node.name + " must have " + name)
+                        if (ClazzLoader.isClassDefined (name)
+                                        || ClazzLoader.isClassExcluded (name)) {
+                        //System.out.println("which it does")
+                                continue;
+*****
+
+***** j2.js
+                        if (n == null) {
+                                n = new ClazzNode ();
+                                n.name = musts[i];
+***** J2SJMOL.JS
+                        if (n == null) {
+                        //System.out.println(clazz + " requires " + name)
+                                n = new ClazzNode ("m", node);
+                                n.name = musts[i];
+*****
+
+***** j2.js
+        if (declaration != null) {
+                node.status = ClazzNode.STATUS_CONTENT_LOADED;
+***** J2SJMOL.JS
+        if (declaration != null) {
+    //System.out.println("declaration found for " + node.name + " " + node.path)
+                node.status = ClazzNode.STATUS_CONTENT_LOADED;
+*****
+
+***** j2.js
+                        if (n == null) {
+                                n = new ClazzNode ();
+                                n.name = optionals[i];
+***** J2SJMOL.JS
+                        if (n == null) {
+                                n = new ClazzNode ("o", node);
+                                n.name = optionals[i];
+*****
+
+***** j2.js
+                if (!ClazzLoader.loadedScripts[path]) {
+                        ClazzLoader.loadScript (path);
+                        return true;
+***** J2SJMOL.JS
+                if (!ClazzLoader.loadedScripts[path]) {
+                        ClazzLoader.loadScript (node.path, node.why, node);
+                        return true;
+*****
+
+***** j2.js
+        ClazzLoader.assurePackageClasspath ("java");
+        var swtPkg = "org.eclipse.swt";
+***** J2SJMOL.JS
+        ClazzLoader.assurePackageClasspath ("java");
+
+        var swtPkg = "org.eclipse.swt";
+*****
+
+***** j2.js
+                        if (n == null) {
+                                n = new ClazzNode ();
+                        }
+***** J2SJMOL.JS
+                        if (n == null) {
+                                n = new ClazzNode ("new", null);
+                        }
+*****
+
+***** j2.js
+                                ClazzLoader.addChildClassNode(ClazzLoader.clazzTreeRoot, n, 1);
+                                Clazz.alert("Clazz loading " + n.path)
+                                ClazzLoader.loadScript (n.path);
+                                if (optionalsLoaded != null) {
+***** J2SJMOL.JS
+                                ClazzLoader.addChildClassNode(ClazzLoader.clazzTreeRoot, n, 1);
+                                //System.out.println("Clazz loading " + n.path)
+                                ClazzLoader.loadScript (n.path, n.why, n);
+                                if (optionalsLoaded != null) {
+*****
+
+***** j2.js
+        } else if (optionalsLoaded != null && ClazzLoader.isClassDefined (name)) {
+                var nn = ClazzLoader.findClass (name);
+                if (nn == null || nn.status >= ClazzNode.STATUS_OPTIONALS_LOADED) {
+***** J2SJMOL.JS
+        } else if (optionalsLoaded != null && ClazzLoader.isClassDefined (name)) {
+        
+                var nn = ClazzLoader.findClass (name);
+                
+                if (nn == null || nn.status >= ClazzNode.STATUS_OPTIONALS_LOADED) {
+*****
+
+***** j2.js
+        }
+        
+};
+***** J2SJMOL.JS
+        }
+};
+*****
+
+***** j2.js
+/*-# maxTotalLines -> mtl #-*/
+Console.maxTotalLines = 1000;
+
+***** J2SJMOL.JS
+/*-# maxTotalLines -> mtl #-*/
+Console.maxTotalLines = 10000;
+
+*****
+
