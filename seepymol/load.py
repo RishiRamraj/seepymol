@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # Used to serialise MMTK primitives to objects that can be rendered by JsMol.
-from seepymol.serialise import protein
+from seepymol.serialise import chemicalobject
 
 
 _loaded = False
@@ -18,6 +18,6 @@ def load_ipython_extension(ip):
         formatter = ip.display_formatter.formatters[mime]
 
         # Register handlers.
-        formatter.for_type_by_name('MMTK.Proteins', 'Protein', protein)
+        formatter.for_type_by_name('MMTK.ChemicalObjects', 'ChemicalObject', chemicalobject)
 
         _loaded = True
