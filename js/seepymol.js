@@ -5,7 +5,7 @@ seepymol = {
 
 var GLmol_groupofatoms_handler = function (json, element) {
     var id = 'GLMol-'+IPython.utils.uuid();
-    var toinsert = $("<div/>").attr('id',id).attr('style', "width: 500px; height: 400px; background-color: black;");
+    var toinsert = $("<div/>").attr('id',id).attr('style', "width: 500px; height: 400px; background-color: white;");
     element.append(toinsert);
 
     var src_id = id + '_src';
